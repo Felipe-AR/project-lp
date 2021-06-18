@@ -1,8 +1,8 @@
 <?php
     class Database {
-        private static $dbName = 'rodeio';
-        private static $dbHost = 'localhost';
-        private static $dbUser = 'root';
+        private static $dbName = '';
+        private static $dbHost = '';
+        private static $dbUser = '';
         private static $dbPassword = '';
 
         private static $connection = null;
