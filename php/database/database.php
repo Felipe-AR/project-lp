@@ -14,7 +14,7 @@
         public static function connect() {
             if(self::$connection == null) {
                 try {
-                    $dsn = 'mysql:host=' . self::$dbHost . 'dbname=' .self::$dbName;
+                    $dsn = 'mysql:host=' . self::$dbHost . 'dbname=' . self::$dbName;
                     self::$connection = new PDO($dsn, self::$dbUser, self::$dbPassword);
                 } catch (PDOException $e) {
                     die($e->getMessage());
