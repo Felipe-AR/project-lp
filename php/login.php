@@ -1,20 +1,21 @@
 <?php
     include 'database/database.php';
 
-    $user = trim($_POST['usuario']);
+    $email = trim($_POST['email']);
     $password = md5(trim($_POST['senha']));
 
     $pdo = Database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT * FROM USUARIOS WHERE USUARIO LIKE ?";
+    $sql = "SELECT * FROM USUARIOS WHERE EMAIL LIKE ?";
     $query = $pdo->prepare($sql);
     $query->execute(array($user));
-    $dbUser = $query->fetch(PDO::FETCH_ASSOC);
+    $user = $query->fetch(PDO::FETCH_ASSOC);
     Database::disconnect();
 
     if ($dbUser['senha'] == $password) {
         session_start();
-        $_SESSION['usuario'] = $user;
-        $_SESSION['nome'] = $dbUser['nome'];
+        $_SESSION['email'] = $email;
+        $_SESSION['nome'] = $user['nome'];
+        header("location: painel.php");
     }
 ?>
