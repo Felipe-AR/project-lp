@@ -1,6 +1,6 @@
 <?php
     class Database {
-        private static $dbName = 'rodeio';
+        private static $dbName = 'pokemondb';
         private static $dbHost = 'localhost';
         private static $dbUser = 'root';
         private static $dbPassword = '';
