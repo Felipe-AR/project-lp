@@ -16,9 +16,9 @@
         <img src="../src/img/pokemon-logo.png" alt="Logo do Pokemón" class="img-fluid logo">
         <h1 class="h1 mb-3 font-weight-normal">Por favor, faça o login!</h1>
         <label for="email" class="sr-only">Endereço de e-mail</label>
-        <input type="email" id="email" class="form-control" placeholder="Endereço de e-mail" required autofocus>
+        <input type="email" id="email" class="form-control" name="email" placeholder="Endereço de e-mail" required>
         <label for="senha" class="sr-only">Senha</label>
-        <input type="password" id="senha" class="form-control" placeholder="Senha" required>
+        <input type="password" id="senha" class="form-control" name="senha" placeholder="Senha" required>
         <button class="btn btn-primary btn-lg" type="submit">Entrar</button>
         <p class="mt-5 mb-3 text-muted">&copy; Pokemon 2021</p>
     </form>
