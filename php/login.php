@@ -9,18 +9,19 @@
     $sql = "SELECT * FROM USUARIOS WHERE EMAIL LIKE ?;";
     $query = $pdo->prepare($sql);
     $query->execute(array($email));
+    
     Database::disconnect();
     
-    if ($query->rowCount() != 0) {
+    if ($query->rowCount() < 1)
+        header("location: index.php");
+    else {
         $user = $query->fetch(PDO::FETCH_ASSOC);
         if ($user['senha'] == $password) {
             session_start();
-            $_SESSION['email'] = $user['email'];
+            $_SESSION['email'] = $email;
             $_SESSION['usuario'] = $user['usuario'];
             header("location: painel.php");
-        }
-    } else {
-        header("location: index.php");
-    }
-        
+        } else
+            header("location: index.php");
+    } 
 ?>
