@@ -20,7 +20,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="h-100">
 
 <head>
     <meta charset="UTF-8">
@@ -35,7 +35,10 @@
     <div class="container">
         <div class="row">
             <div class="text-center mt-5">
-                <h1 class="m-5">Configurar Jogador</h1>
+                <div class="d-flex mb-2">
+                    <a href="../usuarios/usuario.php" class="btn btn-primary btn-lg">Voltar</a>
+                    <h1 class="mx-auto text-uppercase fs-1 fw-bold">Configurar Jogador</h1>
+                </div>
                 <form action="configurar.php" method="GET">
                     <div class="input-group">
                         <input type="text" id="" class="form-control" name="pesquisa" placeholder="Digitar o nome do jogador">
@@ -67,7 +70,6 @@
                         <?php } ?>
                     </tbody>
                 </table>
-                <a href="../usuarios/usuario.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>

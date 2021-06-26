@@ -25,7 +25,7 @@ $pokemons = $pdo->query($sql);
         <div class="row">
             <div class="text-center mt-5">
                 <form action="cadastrarJogador.php" method="POST" class="w-100">
-                    <h1 class="m-5">Cadastrar Jogador</h1>
+                <h1 class="text-uppercase fs-1 fw-bold">Cadastrar Jogador</h1>
                     <div class="form-group p-1">
                         <label for="nome" class="sr-only">Nome do Jogador</label>
                         <input type="text" class="form-control form-control-lg" id="jogador" placeholder="Jogador" name="jogador">

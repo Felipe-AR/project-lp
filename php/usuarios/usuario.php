@@ -18,42 +18,51 @@
     <div class="container">
         <div class="row">
             <div class="text-center mt-5">
-                <a href="../painel.php" class="btn btn-primary btn-lg w-25">Voltar</a>
+                <div class="d-flex mb-2">
+                    <a href="../painel.php" class="btn btn-primary btn-lg">Voltar</a>
+                    <h1 class="mx-auto text-uppercase fs-1 fw-bold">Configurar Jogador</h1>
+                </div>
             </div>
-            <div class="card-group bg-light mt-5">
+            <div class="card-group">
                 <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-                    <div class="card border-0">
-                        <div class="text-center">
-                            <i class="fa fa-user-plus fa-10x"></i>
+                    <div class="card h-100">
+                        <div class="text-center p-5">
+                            <i class="fas fa-user-plus fa-10x"></i>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Cadastrar Usuário</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusamus at quaerat quae molestias atque fugit cum. Minus quibusdam, laborum dolores cumque ex architecto esse, consequatur incidunt perspiciatis cupiditate laboriosam!</p>
-                            <a href="./cadastrar.php" class="btn btn-success w-100 btn-block">Cadastrar usuários</a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center">Cadastrar Jogador</h5>
+                            <p class="card-text text-center">Realizar o cadastro dos jogadores de Pokemón</p>
+                            <div class="mt-auto">
+                                <a href="./cadastrar.php" class="btn btn-success btn-block w-100">Cadastrar usuários</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-                    <div class="card border-0">
-                        <div class="text-center">
-                            <i class="fa fa-search fa-10x"></i>
+                    <div class="card h-100">
+                        <div class="text-center p-5">
+                            <i class="fas fa-search fa-10x"></i>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h5 class="card-title text-center">Consultar Usuário</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusamus at quaerat quae molestias atque fugit cum. Minus quibusdam, laborum dolores cumque ex architecto esse, consequatur incidunt perspiciatis cupiditate laboriosam!</p>
-                            <a href="./consultar.php" class="btn btn-success w-100 btn-block">Consultar Usuário</a>
+                            <p class="card-text text-center">Realizar a consulta dos jogadores de Pokemón cadastrados na aplicação</p>
+                            <div class="mt-auto">
+                                <a href="./consultar.php" class="btn btn-success btn-block w-100">Consultar Usuário</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-                    <div class="card border-0">
-                        <div class="text-center">
-                            <i class="fa fa-user-edit fa-10x"></i>
+                    <div class="card h-100">
+                        <div class="text-center p-5">
+                            <i class="fas fa-user-edit fa-10x"></i>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Configurar Usuário</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusamus at quaerat quae molestias atque fugit cum. Minus quibusdam, laborum dolores cumque ex architecto esse, consequatur incidunt perspiciatis cupiditate laboriosam!</p>
-                            <a href="./configurar.php" class="btn btn-success w-100 btn-block">Configurar Usuário</a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center">Modificar Usuário</h5>
+                            <p class="card-text text-center">Realizar as alterações nos jogadores cadastrados</p>
+                            <div class="mt-auto">
+                                <a href="./configurar.php" class="btn btn-success btn-block w-100">Modificar Usuários</a>
+                            </div>
                         </div>
                     </div>
                 </div>

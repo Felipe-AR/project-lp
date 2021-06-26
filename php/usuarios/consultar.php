@@ -38,9 +38,12 @@
     <div class="container">
         <div class="row">
             <div class="text-center mt-5">
-                <h1 class="m-5">Consultar Jogadores</h1>
+                <div class="d-flex mb-2">
+                    <a href="../usuarios/usuario.php" class="btn btn-primary btn-lg">Voltar</a>
+                    <h1 class="mx-auto text-uppercase fs-1 fw-bold">Consultar Jogador</h1>
+                </div>
                 <form action="consultar.php" method="GET">
-                    <div class="input-group">
+                    <div class="input-group"> 
                         <input type="text" id="" class="form-control" name="pesquisa" placeholder="Digitar o nome do jogador">
                         <button type="submit" class="btn btn-primary btn-lg rounded-0"><i class="fa fa-search"></i></button>
                     </div>
@@ -67,7 +70,6 @@
                         <?php } ?>
                     </tbody>
                 </table>
-                <a href="../usuarios/usuario.php" class="btn btn-danger btn-lg">Voltar</a>
             </div>
         </div>
     </div>
