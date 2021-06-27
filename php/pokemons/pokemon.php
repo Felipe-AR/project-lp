@@ -53,15 +53,15 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mt-5">
-                    <div class="card h-100">
+                    <div class="card h-100"> 
                         <div class="text-center p-5">
                             <i class="fas fa-edit fa-10x"></i>
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center">Modificar Usuário</h5>
-                            <p class="card-text text-center">Realizar o cadastro dos jogadores de Pokemón</p>
+                            <h5 class="card-title text-center">Modificar Pokemóns</h5>
+                            <p class="card-text text-center">Realizar as alterações nos pokémons cadastrados</p>
                             <div class="mt-auto">
-                                <a href="./configurar.php" class="btn btn-success btn-block w-100">Modificar Usuários</a>
+                                <a href="./configurar.php" class="btn btn-success btn-block w-100">Modificar Pokémons</a>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title text-center">Tipos</h5>
-                            <p class="card-text text-center">Realizar o cadastro dos jogadores de Pokemón</p>
+                            <p class="card-text text-center">Realizar o cadastro dos tipos dos Pokemóns</p>
                             <div class="mt-auto">
                                 <a href="./tipo/tipo.php" class="btn btn-success btn-block w-100">Ir para tipos</a>
                             </div>
