@@ -11,12 +11,12 @@
     $pdo = Database::connect();
     $pdo->setAttribute(PDO:: ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if ($pesquisa == "") 
-        $sql = "SELECT J.ID, J.NOME, J.CIDADE, J.ESTADO, P.NOME AS POKEMON FROM JOGADOR 
-        AS J INNER JOIN POKEMON AS P ON (P.ID = J.INICIAL) ORDER BY NOME";
+        $sql = "SELECT J.ID, J.NOME, J.CIDADE, J.ESTADO, P.NOME AS POKEMON FROM JOGADOR AS J 
+        INNER JOIN POKEMON AS P ON (P.ID = J.INICIAL) ORDER BY NOME";
     else
-        $sql = "SELECT J.ID, J.NOME, J.CIDADE, J.ESTADO, P.NOME 
-                AS POKEMON FROM JOGADOR AS J INNER JOIN POKEMON AS P ON (P.ID = J.INICIAL) 
-                WHERE J.NOME LIKE '%" . $pesquisa. "%' ORDER BY NOME";
+        $sql = "SELECT J.ID, J.NOME, J.CIDADE, J.ESTADO, P.NOME AS POKEMON FROM JOGADOR AS J 
+        INNER JOIN POKEMON AS P ON (P.ID = J.INICIAL) 
+        WHERE J.NOME LIKE '%" . $pesquisa. "%' ORDER BY NOME";
 
     $jogadores = $pdo->query($sql);
 

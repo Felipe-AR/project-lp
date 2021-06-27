@@ -20,7 +20,7 @@
             <div class="text-center mt-5">
                 <div class="d-flex mb-2">
                     <a href="../painel.php" class="btn btn-primary btn-lg">Voltar</a>
-                    <h1 class="mx-auto text-uppercase fs-1 fw-bold">Configurar Jogador</h1>
+                    <h1 class="mx-auto text-uppercase fs-1 fw-bold">Seção do Jogador</h1>
                 </div>
             </div>
             <div class="card-group">

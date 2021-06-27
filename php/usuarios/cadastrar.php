@@ -40,7 +40,7 @@ $pokemons = $pdo->query($sql);
                     </div>
                     <div class="form-group p-1">
                         <label for="pokemon" class="sr-only">Nome do Pokemon</label>
-                        <select id="pokemon" class="form-control form-control-lg text-muted" name="pokemon">
+                        <select id="pokemon" class="form-select form-select-lg text-muted" name="pokemon">
                             <option class="text-muted" value="" disabled selected>Escolha o Pokemon Inicial</option>
                         <?php foreach ($pokemons as $pokemon) { ?>
                             <option value="<?php echo $pokemon['id']?>"><?php echo $pokemon['nome']?></option>

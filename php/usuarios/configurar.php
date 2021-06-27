@@ -7,13 +7,14 @@
     else
         $pesquisa = "";
 
-
     $pdo = Database::connect();
     $pdo->setAttribute(PDO:: ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if ($pesquisa == "") 
-        $sql = "SELECT * FROM JOGADOR ORDER BY NOME";
+        $sql = "SELECT J.ID, J.NOME, J.CIDADE, J.ESTADO, P.NOME AS INICIAL FROM JOGADOR AS J
+        INNER JOIN POKEMON AS P ON (P.ID = J.INICIAL) ORDER BY J.NOME";
     else
-        $sql = "SELECT * FROM JOGADOR WHERE NOME LIKE '%" . $pesquisa . "%' ORDER BY NOME";
+        $sql = "SELECT J.ID, J.NOME, J.CIDADE, J.ESTADO, P.NOME AS INICIAL FROM JOGADOR AS J
+        INNER JOIN POKEMON AS P ON (P.ID = J.INICIAL) WHERE J.NOME LIKE '%$pesquisa%' ORDER BY J.NOME";
 
     $jogadores = $pdo->query($sql);
 
@@ -52,16 +53,18 @@
                             <th>Nome</th>
                             <th>Cidade</th>
                             <th>Estado</th>
+                            <th>Inicial</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach($jogadores as $jogador) { ?>
                         <tr>
-                            <td id="tdId"><?php echo $jogador['id']?></td>
-                            <td id="tdNome"><?php echo $jogador['nome']?></td>
-                            <td id="tdCidade"><?php echo $jogador['cidade']?></td>
-                            <td id="tdEstado"><?php echo $jogador['estado']?></td>
+                            <td id="tdId"><?php echo $jogador['ID']?></td>
+                            <td id="tdNome"><?php echo $jogador['NOME']?></td>
+                            <td id="tdCidade"><?php echo $jogador['CIDADE']?></td>
+                            <td id="tdEstado"><?php echo $jogador['ESTADO']?></td>
+                            <td id="tdInicial"><?php echo $jogador['INICIAL']?></td>
                             <td>
                                 <button id="btnEdit" type="button" class="btn btn-success col-lg-3 col-sm-12"><i class="fa fa-user-edit"></i></button>
                                 <button id="btnRemove" type="button" class="btn btn-danger col-lg-3 col-sm-12"><i class="fa fa-trash"></i></button>
@@ -84,9 +87,9 @@
                 let buttonGroup = e.target.parentNode
                 let rowOfButton = buttonGroup.parentNode
                 let idJogador = rowOfButton.querySelector("#tdId").textContent
-                let currentPage = "editarJogador.php"
+                let nextPage = "editarJogador.php"
                 
-                location.replace(`${currentPage}?id=${idJogador}`)
+                location.replace(`${nextPage}?id=${idJogador}`)
             })
         })
 
