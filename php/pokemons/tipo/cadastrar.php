@@ -23,10 +23,10 @@ include '../../database/database.php';
                 <div class="d-flex mb-2">
                     <h1 class="mx-auto text-uppercase fs-1 fw-bold">Cadastrar Tipo</h1>
                 </div>
-                <form action="cadastrarTipo.php" method="POST" class="w-100">
+                <form action="cadastrarTipo.php" method="POST" class="w-100 needs-validation" novalidate>
                     <div class="form-group p-1">
                         <label for="descricao" class="sr-only">Descrição do Tipo do Pokémon</label>
-                        <input type="text" class="form-control form-control-lg" id="descricao" placeholder="Descrição do Tipo do Pokémon" name="descricao">
+                        <input type="text" class="form-control form-control-lg" id="descricao" placeholder="Descrição do Tipo do Pokémon" name="descricao" required>
                     </div>
                     <div class="mt-2 text-center">
                         <input type="submit" value="Confirmar" class="btn btn-success btn-lg">
@@ -38,6 +38,7 @@ include '../../database/database.php';
         </div>
     </div>
     <script src="../../../lib/fontawesome/js/all.min.js"></script>
+    <script src="../../../js/formValidate.js"></script>
 </body>
 
 </html>

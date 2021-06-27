@@ -54,7 +54,7 @@
                 <?php } ?>
                 <form action="configurar.php" method="GET">
                     <div class="input-group">
-                        <input type="text" id="" class="form-control" name="pesquisa" placeholder="Digitar o nome do pokémon    ">
+                        <input type="text" id="" class="form-control" name="pesquisa" placeholder="Digitar o nome do pokémon">
                         <button type="submit" class="btn btn-primary btn-lg rounded-0"><i class="fa fa-search"></i></button>
                     </div>
                 </form>

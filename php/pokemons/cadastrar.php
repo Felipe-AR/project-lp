@@ -27,14 +27,14 @@ $tipos = $pdo->query($sql);
                 <div class="d-flex mb-2">
                     <h1 class="mx-auto text-uppercase fs-1 fw-bold">Cadastrar Pokémon</h1>
                 </div>
-                <form action="cadastrarPokemon.php" method="POST" class="w-100">
+                <form action="cadastrarPokemon.php" method="POST" class="w-100 needs-validation" novalidate>
                     <div class="form-group p-1">
                         <label for="pokemon" class="sr-only">Nome do Pokemon</label>
-                        <input type="text" class="form-control form-control-lg" id="pokemon" placeholder="Pokémon" name="pokemon">
+                        <input type="text" class="form-control form-control-lg" id="pokemon" placeholder="Pokémon" name="pokemon" required>
                     </div>
                     <div class="form-group p-1">
                         <label for="tipo" class="sr-only">Tipo do Pokémon</label>
-                        <select id="tipo" class="form-control form-control-lg text-muted" name="tipo">
+                        <select id="tipo" class="form-control form-control-lg text-muted" name="tipo" required>
                             <option class="text-muted" value="" disabled selected>Escolha o tipo do Pokémon</option>
                         <?php foreach ($tipos as $tipo) { ?>
                             <option value="<?php echo $tipo['id']?>"><?php echo $tipo['descricao']?></option>
@@ -50,6 +50,7 @@ $tipos = $pdo->query($sql);
             </div>
         </div>
     </div>
+    <script src="../../js/formValidate.js"></script>
     <script src="../../lib/fontawesome/js/all.min.js"></script>
 </body>
 

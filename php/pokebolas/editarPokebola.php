@@ -31,21 +31,21 @@
         <div class="row">
             <div class="mt-5">
                 <h1 class="m-5 text-center">Configurar Pokébola</h1>
-                <form action="confirmaEdicao.php" method="POST" class="w-100">
+                <form action="confirmaEdicao.php" method="POST" class="w-100 needs-validation" novalidate>
                     <div class="form-group p-1">
                         <label for="id"><?php echo "Identificação do Pokémon: " . $pokebola["id"]?></label>
                         <input type="hidden" id="id" name="id" value="<?php echo $pokebola["id"]?>">
                     </div>
                     <div class="form-group p-1">
                         <label for="pokebola" class="sr-only">Nome do Pokébola</label>
-                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $pokebola["nome"]?>" name="pokebola">
+                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $pokebola["nome"]?>" name="pokebola" required>
                     </div>
                     <div class="form-group p-1">
                         <label for="cor" class="sr-only">Cor Primaria da Pokébola</label>
-                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $pokebola["cor"]?>" name="cor">
+                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $pokebola["cor"]?>" name="cor" required>
                     </div>
                     <div class="mt-2 text-center">
-                        <input type="submit" value="Confirmar" class="btn btn-success btn-lg">
+                        <input type="submit" value="Confirmar" class="btn btn-success btn-lg" required>
                         <a href="./configurar.php" class="btn btn-danger btn-lg">Voltar</a>
                     </div>
                 </form>
@@ -53,6 +53,7 @@
         </div>
     </div>
     <script src="../../lib/fontawesome/js/all.min.js"></script>
+    <script src="../../js/formValidate.js"></script>
 </body>
 
 </html>

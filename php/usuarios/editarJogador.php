@@ -39,26 +39,26 @@ if (!empty($id)) {
         <div class="row">
             <div class="mt-5">
                 <h1 class="m-5 text-center">Configurar Jogador</h1>
-                <form action="confirmaEdicao.php" method="POST" class="w-100">
+                <form action="confirmaEdicao.php" method="POST" class="w-100 needs-validation" novalidate>
                     <div class="form-group p-1">
                         <label for="id"><?php echo "Identificação do Usuário: " . $jogador["ID"] ?></label>
                         <input type="hidden" id="id" name="id" value="<?php echo $jogador["ID"] ?>">
                     </div>
                     <div class="form-group p-1">
                         <label for="nome" class="sr-only">Nome do Jogador</label>
-                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $jogador["NOME"] ?>" name="nome">
+                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $jogador["NOME"] ?>" name="nome" required>
                     </div>
                     <div class="form-group p-1">
                         <label for="cidade" class="sr-only">Cidade do Jogador</label>
-                        <input type="text" class="form-control form-control-lg" id="cidade" value="<?php echo $jogador["CIDADE"] ?>" name="cidade">
+                        <input type="text" class="form-control form-control-lg" id="cidade" value="<?php echo $jogador["CIDADE"] ?>" name="cidade" required>
                     </div>
                     <div class="form-group p-1">
                         <label for="estado" class="sr-only">Estado do Jogador</label>
-                        <input type="text" class="form-control form-control-lg" id="estado" value="<?php echo $jogador["ESTADO"] ?>" name="estado">
+                        <input type="text" class="form-control form-control-lg" id="estado" value="<?php echo $jogador["ESTADO"] ?>" name="estado" required>
                     </div>
                     <div class="form-group p-1">
                         <label for="pokemon" class="sr-only">Nome do Pokemon</label>
-                        <select id="pokemon" class="form-control form-control-lg" name="pokemon">
+                        <select id="pokemon" class="form-control form-control-lg" name="pokemon" required>
                             <option value="<?php echo $jogador['INICIAL'] ?>" selected>
                                 <?php echo "Inicial: " . $jogador['POKEMON'] ?>
                             </option>
@@ -86,6 +86,7 @@ if (!empty($id)) {
         </div>
     </div>
     <script src="../../lib/fontawesome/js/all.min.js"></script>
+    <script src="../../js/formValidate.js"></script>
     <script>
         let buttonsEdit = document.querySelectorAll("#btnEdit")
         let buttonsRemove = document.querySelectorAll("btnRemove")

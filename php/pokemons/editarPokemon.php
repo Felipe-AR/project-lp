@@ -35,18 +35,18 @@
         <div class="row">
             <div class="mt-5">
                 <h1 class="m-5 text-center">Configurar Pokémon</h1>
-                <form action="confirmaEdicao.php" method="POST" class="w-100">
+                <form action="confirmaEdicao.php" method="POST" class="w-100 needs-validation" novalidate>
                     <div class="form-group p-1">
                         <label for="id"><?php echo "Identificação do Pokémon: " . $pokemon["ID"]?></label>
                         <input type="hidden" id="id" name="id" value="<?php echo $pokemon["ID"]?>">
                     </div>
                     <div class="form-group p-1">
                         <label for="nome" class="sr-only">Nome do Pokémon</label>
-                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $pokemon["NOME"]?>" name="nome">
+                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $pokemon["NOME"]?>" name="nome" required>
                     </div>
                     <div class="form-group p-1">
                         <label for="tipo" class="sr-only">Nome do Pokemon</label>
-                        <select id="tipo" class="form-select form-select-lg" name="tipo">
+                        <select id="tipo" class="form-select form-select-lg" name="tipo" required>
                             <option value="<?php echo $pokemon['idTipo']?>" selected>
                                 <?php echo "Atual: " . $pokemon['TIPO']?>
                             </option>
@@ -66,6 +66,7 @@
         </div>
     </div>
     <script src="../../lib/fontawesome/js/all.min.js"></script>
+    <script src="../../js/formValidate.js"></script>
 </body>
 
 </html>

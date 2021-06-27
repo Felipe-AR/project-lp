@@ -32,17 +32,17 @@
         <div class="row">
             <div class="mt-5">
                 <h1 class="m-5 text-center">Configurando Tipo do Pokémon</h1>
-                <form action="confirmaEdicao.php" method="POST" class="w-100">
+                <form action="confirmaEdicao.php" method="POST" class="w-100 needs-validation" novalidate>
                     <div class="form-group p-1">
                         <label for="id"><?php echo "Identificação do Tipo do Pokémon: " . $tipo["id"]?></label>
                         <input type="hidden" id="id" name="id" value="<?php echo $tipo["id"]?>">
                     </div>
                     <div class="form-group p-1">
                         <label for="descricao" class="sr-only">Descrição do Tipo</label>
-                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $tipo["descricao"]?>" name="descricao">
+                        <input type="text" class="form-control form-control-lg" id="nome" value="<?php echo $tipo["descricao"]?>" name="descricao" required>
                     </div>
                     <div class="mt-2 text-center">
-                        <input type="submit" value="Confirmar" class="btn btn-success btn-lg">
+                        <input type="submit" value="Confirmar" class="btn btn-success btn-lg" required>
                         <a href="./configurar.php" class="btn btn-danger btn-lg">Voltar</a>
                     </div>
                 </form>
@@ -50,6 +50,7 @@
         </div>
     </div>
     <script src="../../../lib/fontawesome/js/all.min.js"></script>
+    <script src="../../../js/formValidate.js"></script>
 </body>
 
 </html>
