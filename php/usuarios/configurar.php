@@ -10,7 +10,7 @@
     $pdo = Database::connect();
     $pdo->setAttribute(PDO:: ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if ($pesquisa == "") 
-        $sql = "SELECT J.ID, J.NOME, J.CIDADE, J.ESTADO, P.NOME AS INICIAL FROM JOGADOR AS J
+        $sql = "SELECT J.ID, J.NOME, J.CIDADE, J.ESTADO, P.NOME AS INICIAL, J.QTDPOKEBOLA FROM JOGADOR AS J
         INNER JOIN POKEMON AS P ON (P.ID = J.INICIAL) ORDER BY J.NOME";
     else
         $sql = "SELECT J.ID, J.NOME, J.CIDADE, J.ESTADO, P.NOME AS INICIAL FROM JOGADOR AS J
@@ -54,6 +54,7 @@
                             <th>Cidade</th>
                             <th>Estado</th>
                             <th>Inicial</th>
+                            <th>Quantidade Pokébola</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -65,6 +66,7 @@
                             <td id="tdCidade"><?php echo $jogador['CIDADE']?></td>
                             <td id="tdEstado"><?php echo $jogador['ESTADO']?></td>
                             <td id="tdInicial"><?php echo $jogador['INICIAL']?></td>
+                            <td id="quantidadePokebolas"><?php echo $jogador["QTDPOKEBOLA"]?></td>
                             <td>
                                 <button id="btnEdit" type="button" class="btn btn-success col-lg-3 col-sm-12"><i class="fa fa-user-edit"></i></button>
                                 <button id="btnRemove" type="button" class="btn btn-danger col-lg-3 col-sm-12"><i class="fa fa-trash"></i></button>
